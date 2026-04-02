@@ -20,7 +20,7 @@ export const siteConfig = {
   nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Donghyuck Choi',
   title: process.env.NEXT_PUBLIC_TITLE || 'AI builder',
   titleEn: process.env.NEXT_PUBLIC_TITLE_EN || 'Freelance Developer',
-  company: process.env.NEXT_PUBLIC_COMPANY || null,
+  company: process.env.NEXT_PUBLIC_COMPANY || 'Habitree',
   companyEn: process.env.NEXT_PUBLIC_COMPANY_EN || null,
   email: process.env.NEXT_PUBLIC_EMAIL || 'cdhrich@gmail.com',
   phone: process.env.NEXT_PUBLIC_PHONE || '010-9988-4810',
