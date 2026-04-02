@@ -29,8 +29,8 @@ export const siteConfig = {
   website: process.env.NEXT_PUBLIC_WEBSITE || null,
   socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, [
   { platform: 'youtube', url: 'https://youtu.be/6jXxmNQkDKs' },
-  { platform: 'threads', url: 'https://blog.naver.com/nevertheless-jos' },
-  { platform: 'linkedin', url: 'https://www.threads.com/@donghyeog9015' }
+  { platform: 'naver-blog', url: 'https://blog.naver.com/nevertheless-jos' },
+  { platform: 'threads', url: 'https://www.threads.com/@donghyeog9015' }
 ]),
   extraContacts: parseJSON<ExtraContactItem[]>(process.env.NEXT_PUBLIC_EXTRA_CONTACTS, [
   { type: 'link', label: '링크맵', value: 'https://linkmap.biz' },
