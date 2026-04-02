@@ -16,20 +16,27 @@ function parsePreset(raw: string | undefined): DesignPreset {
 }
 
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || '홍길동',
-  nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Gildong Hong',
-  title: process.env.NEXT_PUBLIC_TITLE || '프리랜서 개발자',
+  name: process.env.NEXT_PUBLIC_SITE_NAME || '최동혁',
+  nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Donghyuck Choi',
+  title: process.env.NEXT_PUBLIC_TITLE || 'AI builder',
   titleEn: process.env.NEXT_PUBLIC_TITLE_EN || 'Freelance Developer',
   company: process.env.NEXT_PUBLIC_COMPANY || null,
   companyEn: process.env.NEXT_PUBLIC_COMPANY_EN || null,
-  email: process.env.NEXT_PUBLIC_EMAIL || 'hello@example.com',
-  phone: process.env.NEXT_PUBLIC_PHONE || '010-1234-5678',
+  email: process.env.NEXT_PUBLIC_EMAIL || 'cdhrich@gmail.com',
+  phone: process.env.NEXT_PUBLIC_PHONE || '010-9988-4810',
   address: process.env.NEXT_PUBLIC_ADDRESS || null,
   addressEn: process.env.NEXT_PUBLIC_ADDRESS_EN || null,
   website: process.env.NEXT_PUBLIC_WEBSITE || null,
-  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, []),
-  extraContacts: parseJSON<ExtraContactItem[]>(process.env.NEXT_PUBLIC_EXTRA_CONTACTS, []),
-  avatarUrl: process.env.NEXT_PUBLIC_AVATAR_URL || null,
+  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, [
+  { platform: 'youtube', url: 'https://youtu.be/6jXxmNQkDKs' },
+  { platform: 'threads', url: 'https://blog.naver.com/nevertheless-jos' },
+  { platform: 'linkedin', url: 'https://www.threads.com/@donghyeog9015' }
+]),
+  extraContacts: parseJSON<ExtraContactItem[]>(process.env.NEXT_PUBLIC_EXTRA_CONTACTS, [
+  { type: 'link', label: '링크맵', value: 'linkmap.biz' },
+  { type: 'link', label: '독서서비스', value: 'https://readingtree-tan.vercel.app/' }
+]),
+  avatarUrl: process.env.NEXT_PUBLIC_AVATAR_URL || `${_basePath}/images/1775106712884-upload.webp`,
   accentColor: process.env.NEXT_PUBLIC_ACCENT_COLOR || '#3b82f6',
   designPreset: parsePreset(process.env.NEXT_PUBLIC_DESIGN_PRESET || 'pro'),
   fontFamily: process.env.NEXT_PUBLIC_FONT_FAMILY || 'Pretendard Variable',
