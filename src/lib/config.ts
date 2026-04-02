@@ -33,7 +33,7 @@ export const siteConfig = {
   { platform: 'linkedin', url: 'https://www.threads.com/@donghyeog9015' }
 ]),
   extraContacts: parseJSON<ExtraContactItem[]>(process.env.NEXT_PUBLIC_EXTRA_CONTACTS, [
-  { type: 'link', label: '링크맵', value: 'linkmap.biz' },
+  { type: 'link', label: '링크맵', value: 'https://linkmap.biz' },
   { type: 'link', label: '독서서비스', value: 'https://readingtree-tan.vercel.app/' }
 ]),
   avatarUrl: process.env.NEXT_PUBLIC_AVATAR_URL || `${_basePath}/images/1775106712884-upload.webp`,
